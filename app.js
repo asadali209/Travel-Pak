@@ -1,0 +1,15 @@
+const express = require('express');
+const app = express();
+const indexRouter = require('./routes/index');
+const port = process.env.PORT || 3000;
+
+// Set view engine
+app.set("view engine", "hbs");
+
+// Use static files
+app.use(express.static('public'));
+
+// Routes
+app.use("/", indexRouter);
+
+app.listen(port, () => console.log(`Server running on port ${port}`));

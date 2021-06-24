@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Pak</title>
+  {{!-- Box icons --}}
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+  {{!-- Custom Css --}}
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+  
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="#">TRAVEL PAK</a>
+      </div>
+      <div class="menu-open"><i class='bx bx-menu'></i></div>
+      <nav>
+        <div class="menu-close"><i class='bx bx-x'></i></div>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">GALLERY</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="hero">
+      <h1>Explore the beauty of Pakistan.</h1>
+      <div class="btn">
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="container">
+      <div class="text">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quos ratione doloremque id enim aliquam inventore impedit, eum corrupti, repudiandae vitae! Neque, nemo. Laborum hic et odio perspiciatis, id voluptatem aliquid commodi. Voluptates placeat quas saepe? Sequi corrupti atque culpa.</p>
+      </div>
+      <div class="image">
+        <div class="img-cont"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="places">
+    <div class="place-cont">
+      <h2>Visit Places</h2>
+      <div class="place-img-absolute">
+        <img src="./imgs/structure.jpg" alt="">
+      </div>
+      <div class="inner-img">
+        <img src="./imgs/forest.jpg" alt="">
+      </div>
+    </div>
+    {{!-- <div class="place-img-absolute">
+      <img src="./imgs/structure.jpg" alt="">
+    </div>
+    <div class="place-cont">
+      <div class="inner-cont">
+        
+        <div class="inner-img">
+          <img src="./imgs/forest.jpg" alt="">
+        </div>
+      </div>
+    </div> --}}
+  </section>
+
+  <section class="contact">
+    <div class="contact-cont">
+      <h2>Contact Us</h2>
+      <form>
+        <label>NAME :</label>
+        <input type="text" required>
+        <label>EMAIL :</label>
+        <input type="email" required>
+        <label>MESSAGE :</label>
+        <textarea cols="30" rows="1" required></textarea>
+        <input type="submit">
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-cont">
+      <div class="footer-logo">
+        <a href="#">TRAVEL PAK</a>
+      </div>
+      <p>&copy; 2021 Travel Pak. All rights reserved</p>
+      <div class="footer-imgs">
+        <div class="fb"><i class='bx bxl-facebook-circle'></i></div>
+        <div class="insta"><i class='bx bxl-instagram-alt' ></i></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+
+</body>
+</html>
