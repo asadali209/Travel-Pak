@@ -2,7 +2,7 @@
 @import "color";
 
 header{
-  background: linear-gradient(rgba(0,0,0,0.65)), url("../imgs/nature.jpg");
+  background: linear-gradient(rgba(0,0,0,0.5)), url("../imgs/nature.jpg");
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -14,6 +14,7 @@ header{
     align-items: center;
     justify-content: space-between;
     width: 85%;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 1em 0;
 
@@ -82,38 +83,50 @@ header{
 
   .hero{
     width: 85%;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 2em 0;
     text-align: center;
     margin-top: 10em;
 
-    h1{
-      color: $text-primary;
-      font-size: 5rem;
-      margin-bottom: 1.5em;
-    }
-
-    .btn{
-      cursor: pointer;
-
-      a{
-        padding: 1em 1.5em;
-        border: 3px solid $text-primary;
+    .hero-cont{
+      h1{
         color: $text-primary;
-        font-size: 1.6rem;
-        letter-spacing: 5px;
-        word-spacing: 2px;
+        font-size: 5rem;
+        margin-bottom: 1.5em;
+      }
+  
+      .btn{
+        cursor: pointer;
+        display: inline-block;
+  
+        a{
+          padding: 0.9em 1.4em;
+          border: 2px solid $text-primary;
+          color: $text-primary;
+          font-size: 1.6rem;
+          letter-spacing: 5px;
+          word-spacing: 2px;
+          transition: 0.3s ease;
+
+          &:hover{
+            background-color: $text-primary;
+            color: $text-secondary;
+          }
+        }
       }
     }
+
   }
 
 }
 
 .about{
-  margin: 9em 0;
+  padding: 9em 0;
 
   .container{
     width: 85%;
+    max-width: 1300px;
     margin: auto;
     display: flex;
     flex-direction: column-reverse;
@@ -173,81 +186,94 @@ header{
 
   .place-cont{
     width: 85%;
+    max-width: 1300px;
     margin: auto;
 
-    h2{
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 2em;
-      color: $text-primary;
-    }
-
-    .place-img-absolute{
-      width: 90%;
-      margin: 1em auto 3em auto;
-
-      img{
-        width: 100%;
+    .place-second-cont{
+      h2{
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 2em;
+        color: $text-primary;
+      }
+  
+      .place-img-absolute{
+        width: 90%;
+        margin: 1em auto 3em auto;
+  
+        img{
+          width: 100%;
+        }
+      }
+  
+      .inner-img{
+        width: 90%;
+        margin: auto;
+  
+        img{
+          width: 100%;
+        }
       }
     }
 
-    .inner-img{
-      width: 90%;
-      margin: auto;
-
-      img{
-        width: 100%;
-      }
-    }
   }
 
 }
 
 .contact{
-  background: linear-gradient(rgba(0,0,0,0.7)), url('../imgs/valley.jpg');
+  background: linear-gradient(rgba(0,0,0,0.6)), url('../imgs/valley.jpg');
   background-size: cover;
   background-position: 22%;
   padding: 5em 0;
 
   .contact-cont{
     width: 85%;
+    max-width: 1300px;
     margin: auto;
 
-    h2{
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 2em;
-      color: $text-primary;
+    .contact-inner-cont{
+      h2{
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 2em;
+        color: $text-primary;
+      }
+  
+      form{
+        width: 85%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+  
+        label{
+          color: $text-primary;
+          font-size: 1.5rem;
+          margin-bottom: 1em;
+        }
+  
+        input, textarea{
+          background-color: transparent;
+          border: 3px solid $text-primary;
+          padding: 0.8em;
+          color: $text-primary;
+          margin-bottom: 2.2em;
+        }
+  
+        input[type = submit]{
+          border: 3px solid $bg-btn;
+          background-color: $bg-btn;
+          letter-spacing: 3px;
+          cursor: pointer;
+
+          &:hover{
+            background-color: #438d3b;
+            border: 3px solid #438d3b;
+          }
+        }
+  
+      }
     }
 
-    form{
-      width: 85%;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-
-      label{
-        color: $text-primary;
-        font-size: 1.5rem;
-        margin-bottom: 1em;
-      }
-
-      input, textarea{
-        background-color: transparent;
-        border: 3px solid $text-primary;
-        padding: 0.8em;
-        color: $text-primary;
-        margin-bottom: 2.2em;
-      }
-
-      input[type = submit]{
-        border: 3px solid $bg-btn;
-        background-color: $bg-btn;
-        letter-spacing: 3px;
-        cursor: pointer;
-      }
-
-    }
   }
 
 }
@@ -258,6 +284,7 @@ footer{
 
   .footer-cont{
     width: 85%;
+    max-width: 1300px;
     margin: auto;
     text-align: center;
     
@@ -290,4 +317,206 @@ footer{
       }
     }
   }
+}
+
+@media (min-width: 928px){
+
+  header{
+    background: linear-gradient(rgba(0,0,0,0.6)), url("../imgs/nature.jpg");
+    background-size: cover;
+    background-position: 40%;
+    padding: 3em 0;
+  
+    .navbar{
+      .logo a{
+        font-size: 2.4rem;
+      }
+  
+      .menu-open{
+        display: none;
+      }
+  
+      nav{
+        position: static;
+        height: auto;
+        background-color: transparent;
+        padding: 0;
+        transition: none;
+  
+        .menu-close{
+          display: none;
+        }
+  
+        ul{
+          margin-top: 0;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+  
+          li{
+            margin: 0 1.2em;
+  
+            a{
+              color: $text-primary;
+              font-weight: 400;
+              position: relative;
+
+              &:hover::before{
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                width: 100%;
+                height: 2px;
+                background-color: $text-primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .hero{
+      text-align: start;
+      margin-top: 8em;
+  
+      .hero-cont{
+        width: 66%;
+        max-width: 522px;
+
+        h1{
+          font-size: 6rem;
+          margin-bottom: 0.8em;
+        }
+    
+        .btn{
+          a{
+            padding: 0.9em 1.4em;
+            border: 2px solid $text-primary;
+          }
+        }
+      }
+  
+    }
+  
+  }
+
+  .about{
+    padding: 12em 0;
+  
+    .container{
+      flex-direction: row;
+      align-items: center;
+      gap: 5em;
+  
+      .text{
+        width: 45%;
+  
+        h2{
+          text-align: start;
+          font-size: 3rem;
+        }
+  
+        p{
+          font-size: 1.6rem;
+        }
+      }
+  
+      .image{
+        width: 40%;
+        max-width: 430px;
+        height: 29em;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+    
+  }
+
+  .places{
+    margin-bottom: 17em;
+    padding: 7em 0 5em 0;
+  
+    .place-cont{
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+
+      .place-second-cont{
+        width: 50%;
+        margin-right: 0;
+
+        h2{
+          text-align: start;
+          font-size: 3rem;
+        }
+    
+        .place-img-absolute{
+          width: 37%;
+          position: absolute;
+          bottom: -15rem;
+          left: 5rem;
+        }
+    
+        .inner-img{
+          width: 100%;
+        }
+      }
+  
+    }
+  
+  }
+
+  .contact{
+    background: linear-gradient(rgba(0,0,0,0.7)), url('../imgs/valley.jpg');
+    background-size: cover;
+    background-position: 22%;
+    padding: 9em 0;
+  
+    .contact-cont{
+      width: 80%;
+  
+      .contact-inner-cont{
+        width: 55%;
+
+        h2{
+          text-align: start;
+          font-size: 3rem;
+        }
+    
+        form{
+          width: 100%;
+          max-width: 600px;
+          margin-left: 0;
+        }
+      }
+    }
+  
+  }
+
+  footer{
+    padding: 4em 0;
+  
+    .footer-cont{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      .footer-logo{
+        margin-bottom: 0;
+      } 
+  
+      p{
+        margin-bottom: 0;
+      }
+  
+      .footer-imgs{
+        .fb, .insta{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
 }

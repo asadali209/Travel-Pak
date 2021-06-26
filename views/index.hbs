@@ -24,22 +24,24 @@
         <div class="menu-close"><i class='bx bx-x'></i></div>
         <ul>
           <li><a href="#">HOME</a></li>
-          <li><a href="#">ABOUT</a></li>
+          <li><a href="#about">ABOUT</a></li>
           <li><a href="#">GALLERY</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
     </div>
 
     <div class="hero">
-      <h1>Explore the beauty of Pakistan.</h1>
-      <div class="btn">
-        <a href="#">Learn More</a>
+      <div class="hero-cont">
+        <h1>Explore the beauty of Pakistan.</h1>
+        <div class="btn">
+          <a href="#about">Learn More</a>
+        </div>
       </div>
     </div>
   </header>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="container">
       <div class="text">
         <h2>About Us</h2>
@@ -51,41 +53,34 @@
     </div>
   </section>
 
-  <section class="places">
+  <section class="places" id="places">
     <div class="place-cont">
-      <h2>Visit Places</h2>
-      <div class="place-img-absolute">
-        <img src="./imgs/structure.jpg" alt="">
-      </div>
-      <div class="inner-img">
-        <img src="./imgs/forest.jpg" alt="">
-      </div>
-    </div>
-    {{!-- <div class="place-img-absolute">
-      <img src="./imgs/structure.jpg" alt="">
-    </div>
-    <div class="place-cont">
-      <div class="inner-cont">
-        
+      <div class="place-second-cont">
+        <h2>Visit Places</h2>
+        <div class="place-img-absolute">
+          <img src="./imgs/structure.jpg" alt="">
+        </div>
         <div class="inner-img">
           <img src="./imgs/forest.jpg" alt="">
         </div>
       </div>
-    </div> --}}
+    </div>
   </section>
 
-  <section class="contact">
+  <section class="contact" id="contact">
     <div class="contact-cont">
-      <h2>Contact Us</h2>
-      <form>
-        <label>NAME :</label>
-        <input type="text" required>
-        <label>EMAIL :</label>
-        <input type="email" required>
-        <label>MESSAGE :</label>
-        <textarea cols="30" rows="1" required></textarea>
-        <input type="submit">
-      </form>
+      <div class="contact-inner-cont">
+        <h2>Contact Us</h2>
+        <form>
+          <label>NAME :</label>
+          <input type="text" required>
+          <label>EMAIL :</label>
+          <input type="email" required>
+          <label>MESSAGE :</label>
+          <textarea cols="30" rows="1" required></textarea>
+          <input type="submit">
+        </form>
+      </div>
     </div>
   </section>
 

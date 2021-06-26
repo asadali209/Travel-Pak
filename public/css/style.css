@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -27,8 +28,8 @@ ul {
 }
 
 header {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65))), url("../imgs/nature.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.65)), url("../imgs/nature.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5))), url("../imgs/nature.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5)), url("../imgs/nature.jpg");
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -47,6 +48,7 @@ header .navbar {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 85%;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 1em 0;
 }
@@ -132,37 +134,47 @@ header .navbar nav.active {
 
 header .hero {
   width: 85%;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 2em 0;
   text-align: center;
   margin-top: 10em;
 }
 
-header .hero h1 {
+header .hero .hero-cont h1 {
   color: #fff;
   font-size: 5rem;
   margin-bottom: 1.5em;
 }
 
-header .hero .btn {
+header .hero .hero-cont .btn {
   cursor: pointer;
+  display: inline-block;
 }
 
-header .hero .btn a {
-  padding: 1em 1.5em;
-  border: 3px solid #fff;
+header .hero .hero-cont .btn a {
+  padding: 0.9em 1.4em;
+  border: 2px solid #fff;
   color: #fff;
   font-size: 1.6rem;
   letter-spacing: 5px;
   word-spacing: 2px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+header .hero .hero-cont .btn a:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .about {
-  margin: 9em 0;
+  padding: 9em 0;
 }
 
 .about .container {
   width: 85%;
+  max-width: 1300px;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -226,37 +238,38 @@ header .hero .btn a {
 
 .places .place-cont {
   width: 85%;
+  max-width: 1300px;
   margin: auto;
 }
 
-.places .place-cont h2 {
+.places .place-cont .place-second-cont h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2em;
   color: #fff;
 }
 
-.places .place-cont .place-img-absolute {
+.places .place-cont .place-second-cont .place-img-absolute {
   width: 90%;
   margin: 1em auto 3em auto;
 }
 
-.places .place-cont .place-img-absolute img {
+.places .place-cont .place-second-cont .place-img-absolute img {
   width: 100%;
 }
 
-.places .place-cont .inner-img {
+.places .place-cont .place-second-cont .inner-img {
   width: 90%;
   margin: auto;
 }
 
-.places .place-cont .inner-img img {
+.places .place-cont .place-second-cont .inner-img img {
   width: 100%;
 }
 
 .contact {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7))), url("../imgs/valley.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.7)), url("../imgs/valley.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6))), url("../imgs/valley.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6)), url("../imgs/valley.jpg");
   background-size: cover;
   background-position: 22%;
   padding: 5em 0;
@@ -264,17 +277,18 @@ header .hero .btn a {
 
 .contact .contact-cont {
   width: 85%;
+  max-width: 1300px;
   margin: auto;
 }
 
-.contact .contact-cont h2 {
+.contact .contact-cont .contact-inner-cont h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2em;
   color: #fff;
 }
 
-.contact .contact-cont form {
+.contact .contact-cont .contact-inner-cont form {
   width: 85%;
   margin: auto;
   display: -webkit-box;
@@ -286,13 +300,13 @@ header .hero .btn a {
           flex-direction: column;
 }
 
-.contact .contact-cont form label {
+.contact .contact-cont .contact-inner-cont form label {
   color: #fff;
   font-size: 1.5rem;
   margin-bottom: 1em;
 }
 
-.contact .contact-cont form input, .contact .contact-cont form textarea {
+.contact .contact-cont .contact-inner-cont form input, .contact .contact-cont .contact-inner-cont form textarea {
   background-color: transparent;
   border: 3px solid #fff;
   padding: 0.8em;
@@ -300,11 +314,16 @@ header .hero .btn a {
   margin-bottom: 2.2em;
 }
 
-.contact .contact-cont form input[type=submit] {
+.contact .contact-cont .contact-inner-cont form input[type=submit] {
   border: 3px solid #31682B;
   background-color: #31682B;
   letter-spacing: 3px;
   cursor: pointer;
+}
+
+.contact .contact-cont .contact-inner-cont form input[type=submit]:hover {
+  background-color: #438d3b;
+  border: 3px solid #438d3b;
 }
 
 footer {
@@ -314,6 +333,7 @@ footer {
 
 footer .footer-cont {
   width: 85%;
+  max-width: 1300px;
   margin: auto;
   text-align: center;
 }
@@ -351,5 +371,189 @@ footer .footer-cont .footer-imgs {
 footer .footer-cont .footer-imgs .fb, footer .footer-cont .footer-imgs .insta {
   margin: 0 0.2em;
   cursor: pointer;
+}
+
+@media (min-width: 928px) {
+  header {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6))), url("../imgs/nature.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.6)), url("../imgs/nature.jpg");
+    background-size: cover;
+    background-position: 40%;
+    padding: 3em 0;
+  }
+  header .navbar .logo a {
+    font-size: 2.4rem;
+  }
+  header .navbar .menu-open {
+    display: none;
+  }
+  header .navbar nav {
+    position: static;
+    height: auto;
+    background-color: transparent;
+    padding: 0;
+    -webkit-transition: none;
+    transition: none;
+  }
+  header .navbar nav .menu-close {
+    display: none;
+  }
+  header .navbar nav ul {
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .navbar nav ul li {
+    margin: 0 1.2em;
+  }
+  header .navbar nav ul li a {
+    color: #fff;
+    font-weight: 400;
+    position: relative;
+  }
+  header .navbar nav ul li a:hover::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+  }
+  header .hero {
+    text-align: start;
+    margin-top: 8em;
+  }
+  header .hero .hero-cont {
+    width: 66%;
+    max-width: 522px;
+  }
+  header .hero .hero-cont h1 {
+    font-size: 6rem;
+    margin-bottom: 0.8em;
+  }
+  header .hero .hero-cont .btn a {
+    padding: 0.9em 1.4em;
+    border: 2px solid #fff;
+  }
+  .about {
+    padding: 12em 0;
+  }
+  .about .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5em;
+  }
+  .about .container .text {
+    width: 45%;
+  }
+  .about .container .text h2 {
+    text-align: start;
+    font-size: 3rem;
+  }
+  .about .container .text p {
+    font-size: 1.6rem;
+  }
+  .about .container .image {
+    width: 40%;
+    max-width: 430px;
+    height: 29em;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .places {
+    margin-bottom: 17em;
+    padding: 7em 0 5em 0;
+  }
+  .places .place-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: relative;
+  }
+  .places .place-cont .place-second-cont {
+    width: 50%;
+    margin-right: 0;
+  }
+  .places .place-cont .place-second-cont h2 {
+    text-align: start;
+    font-size: 3rem;
+  }
+  .places .place-cont .place-second-cont .place-img-absolute {
+    width: 37%;
+    position: absolute;
+    bottom: -15rem;
+    left: 5rem;
+  }
+  .places .place-cont .place-second-cont .inner-img {
+    width: 100%;
+  }
+  .contact {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7))), url("../imgs/valley.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.7)), url("../imgs/valley.jpg");
+    background-size: cover;
+    background-position: 22%;
+    padding: 9em 0;
+  }
+  .contact .contact-cont {
+    width: 80%;
+  }
+  .contact .contact-cont .contact-inner-cont {
+    width: 55%;
+  }
+  .contact .contact-cont .contact-inner-cont h2 {
+    text-align: start;
+    font-size: 3rem;
+  }
+  .contact .contact-cont .contact-inner-cont form {
+    width: 100%;
+    max-width: 600px;
+    margin-left: 0;
+  }
+  footer {
+    padding: 4em 0;
+  }
+  footer .footer-cont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footer-cont .footer-logo {
+    margin-bottom: 0;
+  }
+  footer .footer-cont p {
+    margin-bottom: 0;
+  }
+  footer .footer-cont .footer-imgs .fb, footer .footer-cont .footer-imgs .insta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
